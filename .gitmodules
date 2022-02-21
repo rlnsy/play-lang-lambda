@@ -1,0 +1,3 @@
+[submodule "play-lang"]
+	path = play-lang
+	url = git@github.com:rlnsy/play-lang.git
