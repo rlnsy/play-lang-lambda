@@ -1,0 +1,28 @@
+service: play-lang-lambda
+
+frameworkVersion: '3'
+
+plugins:
+  - serverless-bundle
+
+custom:
+  bundle:
+    linting: false # TODO: enable and fix lint
+    copyFiles:
+      - from: './play-lang/parser'
+        to: './play-lang/'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  profile: slsAdmin
+  stage: prod
+  region: us-west-2
+  architecture: arm64
+
+package:
+  individually: true
+
+functions:
+  main:
+    handler: index.handler
