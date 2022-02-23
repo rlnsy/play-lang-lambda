@@ -8,7 +8,8 @@
     "build:parser:local": "npm run clean:parser && cd play-lang && make",
     "build:parser": "npm run clean:parser && docker compose run --rm -w /src linux make",
     "main": "npm run build:parser:local && ts-node main.ts",
-    "deploy": "npm run build:parser && sls deploy"
+    "deploy": "npm run build:parser && sls deploy",
+    "remove": "sls remove"
   },
   "keywords": [],
   "author": "",
