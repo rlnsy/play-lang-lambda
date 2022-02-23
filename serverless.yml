@@ -15,7 +15,6 @@ custom:
 provider:
   name: aws
   runtime: nodejs14.x
-  profile: slsAdmin
   stage: prod
   region: us-west-2
   architecture: arm64
