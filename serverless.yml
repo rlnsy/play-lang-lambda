@@ -15,9 +15,9 @@ custom:
 provider:
   name: aws
   runtime: nodejs14.x
-  stage: prod
-  region: us-west-2
   architecture: arm64
+  stage: ${env:STAGE}
+  region: ${env:AWS_REGION}
 
 package:
   individually: true
